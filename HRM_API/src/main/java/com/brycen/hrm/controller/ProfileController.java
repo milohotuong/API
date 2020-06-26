@@ -28,7 +28,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.brycen.hrm.entity.Profile;
 import com.brycen.hrm.service.ProfileService;
-import com.magrabbit.pilot.common.ResponseResult;
+//import com.magrabbit.pilot.common.ResponseResult;
 import com.brycen.hrm.service.FileService;
 
 import java.io.InputStream;
@@ -71,8 +71,9 @@ public class ProfileController {
 
 	@RequestMapping(path = "/uploadAvatar", method = RequestMethod.POST)
 	public @ResponseBody String uploadAvatar(
-			@RequestParam(value = "multipartFile", required = false) MultipartFile multipartFile) {
-		return fileService.upload(multipartFile);
+			@RequestParam(value = "multipartFile", required = false) MultipartFile multipartFile, 
+			@RequestParam(value = "userId", required = false) long userId) {
+		return fileService.upload(multipartFile,userId);
 	}
 
 	@RequestMapping(path = "/getImage", method = RequestMethod.GET)

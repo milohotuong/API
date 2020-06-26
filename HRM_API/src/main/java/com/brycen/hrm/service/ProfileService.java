@@ -20,9 +20,9 @@ import org.springframework.web.multipart.MultipartFile;
 import com.brycen.hrm.entity.Profile;
 import com.brycen.hrm.entity.User;
 import com.brycen.hrm.repository.ProfileRepository;
-import com.magrabbit.pilot.common.ResponseResult;
-import com.magrabbit.pilot.utils.FileUtils;
-import com.magrabbit.pilot.utils.MapperUtils;
+//import com.magrabbit.pilot.common.ResponseResult;
+//import com.magrabbit.pilot.utils.FileUtils;
+//import com.magrabbit.pilot.utils.MapperUtils;
 
 @Service
 public class ProfileService {
